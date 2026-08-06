@@ -1,0 +1,42 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "João Bonifácio"
+  site-url: "https://bonijoao.github.io"
+  description: "Portfólio, Blog e Cientista de Dados | Especialista em R & Shiny"
+  navbar:
+    background: primary
+    search: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: cv.qmd
+        text: "Sobre / CV"
+      - href: pacotes/index.qmd
+        text: Pacotes R
+      - href: shiny/index.qmd
+        text: Shiny Apps
+      - href: analises/index.qmd
+        text: Análises
+      - href: blog/index.qmd
+        text: Blog
+    right:
+      - icon: github
+        href: https://github.com/bonijoao
+      - icon: linkedin
+        href: https://linkedin.com/in/seu-perfil
+      - text: ""
+        href: "#"
+        id: quarto-toggle-theme
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.scss
+    page-layout: full
+    embed-resources: true
+ 

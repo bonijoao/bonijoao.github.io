@@ -1,0 +1,20 @@
+---
+title: "Blog"
+description: "Artigos, tutoriais e reflexões sobre R, estatística, matemática e ciência de dados."
+listing:
+  contents: posts
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [date, title, reading-time, description, categories, image]
+  feed: true
+page-layout: full
+embed-resources: true
+---
+
+<div class="hero-banner">
+  <h1 class="hero-title">Blog & Artigos</h1>
+  <p class="lead">Espaço para publicação de tutoriais de R, resoluções matemáticas, dicas de visualização de dados e ciência de dados.</p>
+</div>

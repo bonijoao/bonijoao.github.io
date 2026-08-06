@@ -1,0 +1,64 @@
+---
+title: "Sobre & Currículo"
+page-layout: full
+embed-resources: true
+about:
+  template: trestles
+  image: profile.jpg
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/bonijoao
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/seu-perfil
+    - icon: envelope
+      text: Email
+      href: mailto:seu.email@exemplo.com
+---
+
+## João Bonifácio 👋
+
+Sou **Especialista em Análise de Dados, Estatística e Desenvolvimento em R**. Tenho experiência no desenvolvimento de pacotes R publicados no **CRAN**, criação de aplicações interativas em **Shiny**, análise exploratória e estatística, além da construção de relatórios dinâmicos e reprodutíveis em Quarto.
+
+---
+
+### 🎓 Formação Acadêmica
+
+- **Universidade Federal de Lavras (UFLA)**  
+  *Graduação / Formação em Estatística / Ciência de Dados*
+
+---
+
+### 🛠️ Habilidades Técnicas
+
+<span class="badge-r">Linguagem R</span>
+<span class="badge-tech">Shiny Apps</span>
+<span class="badge-cran">Pacotes CRAN</span>
+<span class="badge-tech">Tidyverse</span>
+<span class="badge-tech">Estatística & Probabilidade</span>
+<span class="badge-tech">Modelagem de Regressão</span>
+<span class="badge-tech">Quarto / R Markdown</span>
+<span class="badge-tech">Análise Multivariada & PCA</span>
+<span class="badge-tech">Git & GitHub</span>
+
+---
+
+### 📦 Pacotes R Publicados no CRAN
+
+1. **[`deriva`](https://CRAN.R-project.org/package=deriva)**: Métodos numéricos para derivadas e cálculo funcional em R.
+2. **[`tidyprf`](https://CRAN.R-project.org/package=tidyprf)**: Ferramenta baseada nos princípios tidyverse para manipulação e estruturação de dados.
+
+---
+
+### 🚀 Principais Projetos
+
+- **Aplicações Shiny**:
+  - *ProbCalc*: Calculadora de distribuições de probabilidade com suporte multilíngue.
+  - *cor_xy*: Análise de correlação e regressão linear simples interativa.
+  - *DeSta*: Estatística descritiva e gerador de gráficos.
+  - *Brasileirão*: Análise de desempenho histórico da Série A dos pontos corridos.
+- **Relatórios & Análises**:
+  - Análise exploratória das condições de Saneamento Básico vs Esquistossomose em MG.
+  - Análise de Componentes Principais (PCA) na gestão de resíduos sólidos em MG.
+  - Regressão Polinomial e caracterização temporal de sensores de radiação UV.

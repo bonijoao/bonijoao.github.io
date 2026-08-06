@@ -1,0 +1,139 @@
+---
+title: "Soma de Riemann com R"
+description: "Aprenda a calcular a área de uma região plana delimitada por uma curva usando a soma de Riemann com R"
+author: "João Bonifácio"
+date: "2025-02-16"
+categories: [R, Matemática]
+image: "thumbnail.png"
+theme: lux
+---
+
+## Introdução
+
+
+A soma de Riemann é uma técnica matemática utilizada para aproximar a área de uma região plana delimitada por uma curva. Ela é uma das ferramentas fundamentais para o cálculo de integrais definidas e é amplamente utilizada em várias áreas da ciência e engenharia.
+
+Neste post, vamos usar o R para aproximar a área de uma região plana delimitada por uma curva usando a soma de Riemann. Vamos usar três métodos de soma de Riemann: esquerda, direita e ponto médio. De pacotes usaremos o `kableExtra` para visualizar as tabelas.
+
+## Aproximação de area sob a curva
+
+A soma é dada pela divisão da região a ser calculada em formas (retângulos, trapézios, parábolas ou cubos) que juntos formam uma região que é similar àquela a ser medida, então calcula-se a área de cada uma das formas, e finalmente soma-se todas essas áreas menores juntas.  Essa abordagem pode ser usada para encontrar uma aproximação numérica para a integral definida. Para isso, precisa-se definir uma função e os limites de integração.
+
+```{r}
+fx = function(x) -x^2 + 3*x + 4
+a = 1
+b = 4
+```
+
+Tendo a função e os limites de integração, vamos definir a função de soma de Riemann para aproximar a área sob a curva. Para isso, vamos dividir a região de integração em $n$ partes iguais e calcular a área de cada uma das partes. A soma dessas áreas é uma aproximação da área sob a curva. Considerando $n=20$ e usando o limite inferior da região de integração como ponto de partida, vamos calcular a área sob a curva.
+
+```{r}
+#dividir o intervalo em subintervalos
+seqx = seq(a,b,length.out=21);
+dx = diff(seqx)
+
+#left end point
+fx.left = fx(seqx[-length(seqx)])
+Ln = sum(dx*fx.left)
+
+#construir grafico
+x = seq(a,b,by=0.1);
+
+#left
+plot(x,fx(x),type='l',ylim=c(min(fx(x)),max(fx(x)))); abline(h=0,v=0);
+for(i in 1:length(seqx))  rect(seqx[i], 0, seqx[i+1], fx(seqx[i]),col=rgb(0,1,1,0.2))
+
+```
+
+Pode-se repetir o mesmo processo para o ponto final do intervalo de integração e para o ponto médio do intervalo de integração.
+
+```{r}
+#right end point
+fx.right = fx(seqx[-1])
+Rn = sum(dx*fx.right)
+
+#middle point
+fx.middle = fx(seqx[-1] - dx/2);
+Mn = sum(dx*fx.middle)
+
+par(mfrow=c(1,2))
+
+#right
+plot(x,fx(x),type='l',ylim=c(min(fx(x)),max(fx(x)))); abline(h=0,v=0);
+for(i in 1:length(seqx))  rect(seqx[i], 0, seqx[i+1], fx(seqx[i+1]),col=rgb(0,1,1,0.2))
+
+#middle
+plot(x,fx(x),type='l',ylim=c(min(fx(x)),max(fx(x)))); abline(h=0,v=0);
+for(i in 1:length(seqx))  rect(seqx[i], 0, seqx[i+1], fx((seqx[i+1]+seqx[i])/2),col=rgb(0,1,1,0.2))
+```
+
+Podemos então comparar a área sob a curva calculada pelos três métodos de soma de Riemann com o valor da integral definida.
+
+```{r}
+library(kableExtra) # para a tabela
+resp = integrate(fx, lower = a, upper = b)$value
+error = c(abs(resp-Ln),abs(resp-Rn),abs(resp-Mn),resp)
+kable(data.frame(
+  c("Valor", "Erro"),
+  c(Ln,abs(resp-Ln)),
+  c(Rn,abs(resp-Rn)),
+  c(Mn,abs(resp-Mn)),
+  c(resp,0)), 
+  col.names = c("","Esquerda","Direita","Meio","Valor real"),
+  caption = "Comparação entre os métodos de soma de Riemann")
+```
+
+Nota-se que a soma de Riemann pelo ponto médio é a que mais se aproxima do valor real da integral definida.
+
+## Aproximação de área entre duas curvas
+
+Da mesma forma, a soma de Riemann também pode ser usada para encontrar a área entre duas curvas. Para isso, precisa-se definir duas funções e os limites de integração. Seja:
+$$f(x) = \sqrt{x}$$ 
+e 
+$$g(x) = x$$
+vamos encontrar a área entre as duas curvas no intervalo $[0,1]$.
+
+```{r}
+f1x = function(x) x
+f2x = function(x) sqrt(x)
+a = 0; 
+b = 1;
+seqx = seq(a,b,length.out=50)
+par(mfrow=c(1,2))
+x = seq(0,1,by=0.1);
+```
+
+Tendo as duas funções e os limites de integração, vamos calcular a área entre as duas curvas usando a soma de Riemann pelo ponto médio.
+
+```{r}
+par(mfrow=c(1,2))
+plot(x,f1x(x),type='l',ylim=c(0,max(f1x(x)))); abline(h=0,v=0);
+lines(x,f2x(x))
+plot(x,f1x(x),type='l',ylim=c(0,max(f1x(x)))); abline(h=0,v=0);
+lines(x,f2x(x))
+for(i in 1:length(seqx))  rect(seqx[i], 0, seqx[i+1], f1x((seqx[i+1]+seqx[i])/2),col=rgb(0,1,1,0.5))
+for(i in 1:length(seqx))  rect(seqx[i], 0, seqx[i+1], f2x((seqx[i+1]+seqx[i])/2),col=rgb(1,0,0,.3))
+```
+
+A área entre as duas curvas é dada pela diferença entre as áreas sob as duas curvas. Neste  caso precisamos calcular a área sob a curva $g(x)$ e subtrair a área sob a curva $f(x)$.
+Assim, a área entre as duas curvas é dada por:
+
+```{r}
+dx = diff(seqx)
+f1x.middle = f1x(seqx[-1] - dx/2);
+f2x.middle = f2x(seqx[-1] - dx/2);
+Mn = sum(dx*f2x.middle - dx*f1x.middle)
+Mn
+```
+Comparando este valor com o valor real da área entre as duas curvas, temos:
+
+
+$$\int_{0}^{1} (\sqrt{x}-x)  dx = \frac{2\sqrt{x}}{3}-\frac{x^2}{2}\bigg|_{0}^{1}=\frac{2}{3}-\frac{1}{2}=\frac{1}{6}$$
+Usando a função integrate do R, temos:
+
+
+```{r}
+int <-integrate(function(x) f2x(x)-f1x(x), lower = a, upper = b)$value
+cat("Valor real da área entre as duas curvas:",int)
+```
+Que é um valor muito próximo do valor calculado pela soma de Riemann pelo ponto médio. Para melhorar a precisão, pode-se aumentar o número de subintervalos.

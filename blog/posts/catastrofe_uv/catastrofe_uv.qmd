@@ -1,0 +1,170 @@
+---
+title: "Catástrofe do Ultravioleta"
+description: "Explorando um dos problemas fundamentais que levaram ao nascimento da Física Quântica"
+author: "João Bonifácio"
+date: "2025-02-17"
+categories: [R, Física, Simulação]
+image: "thumbnail.jpg"
+theme: lux
+---
+
+## Introdução
+
+Durante toda a minha primeira graduação em **Física**, nunca escrevi sequer uma linha de código. No máximo, mexi um pouco com `Arduino` em uma prática de ensino e brinquei com `Wolfram Mathematica` em um curso de cálculo. Mas, assim que comecei minha segunda graduação em `Estatística`, já estava programando em `R`.
+
+Foi então que me peguei pensando: como teria sido minha experiência na Física se eu tivesse aprendido a programar antes? Durante as exaustivas aulas de *Mecânica Quântica* ou *Eletromagnetismo*, será que criar simulações teria me ajudado a compreender melhor os conceitos?
+
+Bem, enquanto meus colegas da Física Teórica ainda não inventam uma máquina do tempo, posso pelo menos corrigir isso agora. Neste post, vamos explorar a *Catástrofe do Ultravioleta* usando algumas visualizações em `R`. Esse problema da **Física Clássica** foi um dos estopins para o surgimento da Física Moderna—o que me parece um ótimo ponto de partida.
+
+## O Problema do Corpo Negro
+
+Um **Corpo Negro** é um objeto idealizado que absorve toda a radiação eletromagnética que incide sobre ele, ou seja, nenhuma luz o atravessa nem é refletida. Apesar disso, corpos negros emitem radiação térmica que permite medir sua temperatura.
+
+Para a física clássica, a radiação térmica seguia um padrão bem estabelecido:
+
+### Leis Clássicas
+
+1. **Lei de Stefan-Boltzmann**: A energia total emitida é proporcional à quarta potência da temperatura
+   $$P = \sigma T^4$$
+   onde $\sigma = 5.67 \times 10^{-8} \, \text{W m}^{-2} \text{K}^{-4}$
+
+2. **Lei de Wien**: O comprimento de onda do pico da emissão é inversamente proporcional à temperatura
+   $$\lambda_{\text{máx}} = \frac{b}{T}$$
+   onde $b = 2.898 \times 10^{-3} \, \text{m K}$
+
+### O Problema da Teoria Clássica
+
+A física clássica previa que a intensidade da radiação deveria seguir a **Lei de Rayleigh-Jeans**:
+
+$$B(\lambda, T) = \frac{2ck_BT}{\lambda^4}$$
+
+Essa equação apresenta um problema grave: à medida que o comprimento de onda diminui (região do ultravioleta), a intensidade tende ao infinito! Isso ficou conhecido como a **Catástrofe do Ultravioleta**.
+
+## Simulação em R
+
+Vamos comparar a teoria clássica com a solução quântica proposta por Planck:
+
+```{r, message=FALSE, warning=FALSE}
+# Carregando os pacotes necessários
+library(ggplot2)
+library(dplyr)
+
+# Constantes físicas
+h <- 6.626e-34  # Constante de Planck (J·s)
+c <- 3e8        # Velocidade da luz (m/s)
+k_B <- 1.380e-23  # Constante de Boltzmann (J/K)
+
+# Função de Planck para radiação de corpo negro
+planck_function <- function(lambda, T) {
+  # lambda em metros, T em Kelvin
+  # Retorna a densidade espectral de energia
+  term1 <- (2 * pi * h * c^2) / (lambda^5)
+  term2 <- 1 / (exp((h * c)/(lambda * k_B * T)) - 1)
+  return(term1 * term2)
+}
+
+# Função para teoria clássica (Rayleigh-Jeans)
+rayleigh_jeans <- function(lambda, T) {
+  # Multiplicamos por pi para compatibilidade com a função de Planck
+  return(2 * pi * c * k_B * T / lambda^4)
+}
+
+# Criar sequência de comprimentos de onda (100 nm a 3000 nm)
+lambda_seq <- seq(100e-9, 3000e-9, length.out = 500)
+temperatures <- c(3000, 4000, 5000, 6000)  # Temperaturas em Kelvin
+
+# Criar dataframe para as curvas de Planck
+df_planck <- expand.grid(lambda = lambda_seq, T = temperatures)
+df_planck$intensity <- mapply(planck_function, df_planck$lambda, df_planck$T)
+df_planck$theory <- "Planck (Quântica)"
+
+# Criar dataframe para teoria clássica (apenas para 5000K)
+df_classical <- data.frame(
+  lambda = lambda_seq,
+  T = 5000,
+  intensity = rayleigh_jeans(lambda_seq, 5000),
+  theory = "Rayleigh-Jeans (Clássica)"
+)
+
+# Normalizar os valores para melhor visualização
+max_planck <- max(df_planck$intensity)
+df_planck$intensity_norm <- df_planck$intensity / max_planck * 1e14
+df_classical$intensity_norm <- df_classical$intensity / max_planck * 1e14
+
+# Limitar valores da teoria clássica para evitar explosão no gráfico
+df_classical$intensity_norm[df_classical$intensity_norm > 50] <- 50
+
+# Criar o gráfico
+ggplot() +
+  geom_line(data = df_planck, 
+            aes(x = lambda * 1e9, y = intensity_norm, 
+                color = factor(T), linetype = theory),
+            size = 1) +
+  geom_line(data = df_classical,
+            aes(x = lambda * 1e9, y = intensity_norm, linetype = theory),
+            color = "red", size = 1.2) +
+  scale_color_viridis_d(name = "Temperatura (K)") +
+  scale_linetype_manual(values = c("solid", "dashed"),
+                       name = "Teoria") +
+  scale_x_continuous(limits = c(200, 2000)) +
+  scale_y_continuous(limits = c(0, 20)) +
+  labs(x = "Comprimento de Onda (nm)",
+       y = "Intensidade Espectral (10¹⁴ W·m⁻²·sr⁻¹·m⁻¹)",
+       title = "Radiação de Corpo Negro: Teoria Clássica vs Quântica",
+       subtitle = "A Catástrofe do Ultravioleta e sua Solução") +
+  theme_minimal() +
+  theme(legend.position = "right",
+        plot.title = element_text(size = 14, face = "bold"),
+        plot.subtitle = element_text(size = 12))
+```
+
+## Análise dos Resultados
+
+O gráfico mostra claramente o problema da teoria clássica:
+
+1. **Região de baixas frequências (comprimentos de onda longos)**: Ambas as teorias concordam razoavelmente bem.
+
+2. **Região de altas frequências (comprimentos de onda curtos)**: A teoria clássica prevê intensidades infinitas, enquanto a teoria de Planck prevê um decaimento exponencial.
+
+3. **Lei de Wien**: Observe como o pico da emissão se desloca para comprimentos de onda menores à medida que a temperatura aumenta.
+
+```{r}
+# Calculando os picos de emissão para verificar a Lei de Wien
+wien_constant <- 2.898e-3  # m·K
+
+temperatures_wien <- c(3000, 4000, 5000, 6000)
+predicted_peaks <- wien_constant / temperatures_wien * 1e9  # Convertendo para nm
+
+# Encontrando os picos numericamente
+find_peak <- function(T) {
+  lambda_fine <- seq(100e-9, 3000e-9, length.out = 10000)
+  intensities <- planck_function(lambda_fine, T)
+  peak_index <- which.max(intensities)
+  return(lambda_fine[peak_index] * 1e9)  # Convertendo para nm
+}
+
+numerical_peaks <- sapply(temperatures_wien, find_peak)
+
+# Comparação
+comparison_df <- data.frame(
+  Temperatura = temperatures_wien,
+  "Pico Teórico (nm)" = round(predicted_peaks, 1),
+  "Pico Numérico (nm)" = round(numerical_peaks, 1),
+  "Diferença (%)" = round(abs(predicted_peaks - numerical_peaks) / predicted_peaks * 100, 2)
+)
+
+knitr::kable(comparison_df, caption = "Verificação da Lei de Wien")
+```
+
+## Conclusão
+
+A Catástrofe do Ultravioleta foi um dos problemas fundamentais que levaram Max Planck a propor a quantização da energia em 1900, dando origem à Física Quântica. A solução de Planck não apenas resolveu o problema matemático, mas também revolucionou nossa compreensão da natureza da luz e da matéria.
+
+Este exemplo mostra como a programação pode ser uma ferramenta poderosa para visualizar e compreender conceitos físicos complexos. A capacidade de simular e comparar diferentes teorias nos permite apreciar melhor os momentos revolucionários da ciência.
+
+## Referências
+
+- Planck, M. (1900). *Zur Theorie des Gesetzes der Energieverteilung im Normalspektrum*. Verhandlungen der Deutschen Physikalischen Gesellschaft.
+- Griffiths, D. J. (2004). *Introduction to Quantum Mechanics*. Pearson Prentice Hall.
+- Eisberg, R., & Resnick, R. (1985). *Quantum Physics of Atoms, Molecules, Solids, Nuclei, and Particles*. John Wiley & Sons.
+

@@ -1,0 +1,173 @@
+/* ==========================================
+   Design System & Modern Aesthetics
+   João Bonifácio - Portfolio & Blog
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+/* Regras Globais de Tipografia */
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+code, pre, .sourceCode {
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9em;
+}
+
+/* Navbar Customizada */
+.navbar {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-weight: 500;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Foto de Perfil na Home / About */
+.profile-photo, .about-image {
+  border-radius: 50% !important;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
+  border: 4px solid #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+}
+
+.profile-photo:hover, .about-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
+}
+
+/* Hero Section */
+.hero-banner {
+  padding: 3rem 0 2rem 0;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  margin-bottom: 2rem;
+}
+
+.hero-title {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #1e293b 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cards Responsivos e Elevação */
+.card, .quarto-grid-item {
+  border-radius: 14px !important;
+  border: 1px solid rgba(226, 232, 240, 0.8) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -2px rgba(0, 0, 0, 0.03) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+  overflow: hidden;
+}
+
+.card:hover, .quarto-grid-item:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Custom Badges & Tags */
+.badge-tech, .badge-cran, .badge-r {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 20px;
+  margin-right: 0.35rem;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge-r {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.badge-cran {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.badge-tech {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+/* Botões Modernos */
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+}
+
+.btn-outline-primary {
+  border: 2px solid #2563eb;
+  color: #2563eb;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.45rem 1.15rem;
+  transition: all 0.25s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Ajustes para Tema Escuro */
+[data-bs-theme="dark"], body.quarto-dark {
+  .hero-title {
+    background: linear-gradient(135deg, #ffffff 0%, #60a5fa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .card, .quarto-grid-item {
+    background-color: #1e293b !important;
+    border-color: rgba(51, 65, 85, 0.8) !important;
+  }
+
+  .card:hover, .quarto-grid-item:hover {
+    border-color: rgba(96, 165, 250, 0.4) !important;
+    box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  .badge-r {
+    background-color: rgba(3, 105, 161, 0.25);
+    color: #38bdf8;
+  }
+
+  .badge-cran {
+    background-color: rgba(21, 128, 61, 0.25);
+    color: #4ade80;
+  }
+
+  .badge-tech {
+    background-color: rgba(71, 85, 105, 0.25);
+    color: #cbd5e1;
+  }
+
+  .profile-photo, .about-image {
+    border-color: #1e293b;
+  }
+}

@@ -1,0 +1,67 @@
+---
+title: "Pacotes R"
+description: "Pacotes desenvolvidos e publicados no CRAN (Comprehensive R Archive Network) e GitHub."
+page-layout: full
+embed-resources: true
+---
+
+<div class="hero-banner">
+  <h1 class="hero-title">Pacotes R</h1>
+  <p class="lead">Projetos de código aberto e pacotes R desenvolvidos para resolver problemas de análise de dados, estatística e computação.</p>
+</div>
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 p-4">
+
+### `deriva` <span class="badge-cran">CRAN</span> <span class="badge-r">R Package</span>
+
+Pacote R publicado no CRAN para cálculos e estimativas numéricas de derivadas e análise matemática funcional.
+
+**Instalação via CRAN:**
+```r
+install.packages("deriva")
+```
+
+**Instalação via GitHub:**
+```r
+# install.packages("remotes")
+remotes::install_github("bonijoao/deriva")
+```
+
+<div class="mt-4">
+  <a href="https://CRAN.R-project.org/package=deriva" class="btn btn-primary me-2" target="_blank">Página no CRAN →</a>
+  <a href="https://github.com/bonijoao/deriva" class="btn btn-outline-primary" target="_blank">GitHub</a>
+</div>
+
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 p-4">
+
+### `tidyprf` <span class="badge-cran">CRAN</span> <span class="badge-r">R Package</span>
+
+Pacote R desenvolvido com foco no ecossistema tidyverse para processamento, filtragem e manipulação simplificada de dados.
+
+**Instalação via CRAN:**
+```r
+install.packages("tidyprf")
+```
+
+**Instalação via GitHub:**
+```r
+# install.packages("remotes")
+remotes::install_github("bonijoao/tidyprf")
+```
+
+<div class="mt-4">
+  <a href="https://CRAN.R-project.org/package=tidyprf" class="btn btn-primary me-2" target="_blank">Página no CRAN →</a>
+  <a href="https://github.com/bonijoao/tidyprf" class="btn btn-outline-primary" target="_blank">GitHub</a>
+</div>
+
+</div>
+:::
+
+:::

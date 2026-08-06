@@ -1,0 +1,75 @@
+---
+title: "Análises de Dados"
+description: "Estudos de caso, relatórios estatísticos e pesquisas aplicadas desenvolvidas com a linguagem R."
+page-layout: full
+embed-resources: true
+---
+
+<div class="hero-banner">
+  <h1 class="hero-title">Relatórios & Análises de Dados</h1>
+  <p class="lead">Trabalhos práticos cobrindo análise exploratória, estatística multivariada, modelos regressivos e estudo de dados públicos.</p>
+</div>
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 p-4">
+
+### Saneamento Básico & Esquistossomose em MG
+<span class="badge-r">R</span> <span class="badge-tech">Saúde Pública</span> <span class="badge-tech">Análise Exploratória</span>
+
+Investigação sobre a relação entre as condições de infraestrutura de saneamento básico e os índices de incidência de esquistossomose nos municípios de Minas Gerais.
+
+<div class="mt-4">
+  <a href="Análise Exploratória da Relação entre Condições de Saneamento Básico e Incidência de Esquistossomose em MG.html" class="btn btn-primary" target="_blank">Abrir Relatório Completo →</a>
+</div>
+
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 p-4">
+
+### Regressão Polinomial: Sensores UV
+<span class="badge-r">R</span> <span class="badge-tech">Regressão Polinomial</span> <span class="badge-tech">Séries Temporais</span>
+
+Modelagem polinomial para caracterização do comportamento temporal e da taxa de resposta de filmes poliméricos expostos a diferentes doses de radiação ultravioleta.
+
+<div class="mt-4">
+  <a href="Análise de Regressão Polinomial e Caracterização do Comportamento Temporal dos Filmes Poliméricos Sensores de Radiação UV.html" class="btn btn-primary" target="_blank">Abrir Relatório Completo →</a>
+</div>
+
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 p-4">
+
+### PCA: Gestão de Resíduos Sólidos em MG
+<span class="badge-r">R</span> <span class="badge-tech">Análise Multivariada</span> <span class="badge-tech">PCA</span>
+
+Aplicação da Análise de Componentes Principais (PCA) para sintetizar os indicadores ambientais e operacionais da gestão de resíduos sólidos urbanos em Minas Gerais (2019–2021).
+
+<div class="mt-4">
+  <a href="Relatório de Análise de Componentes Principais (PCA) da Gestão de Resíduos Sólidos em Minas Gerais (2019-2021).html" class="btn btn-primary" target="_blank">Abrir Relatório Completo →</a>
+</div>
+
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 p-4">
+
+### Série A do Campeonato Brasileiro (2014–2023)
+<span class="badge-r">R</span> <span class="badge-tech">Futebol</span> <span class="badge-tech">FBref</span>
+
+Análise exploratória detalhada dos dados de 10 anos de Campeonato Brasileiro Série A, abrangendo 200 campanhas e 36 variáveis de desempenho coletadas via FBref.
+
+<div class="mt-4">
+  <a href="Analise Exploratória da Série A do Campeonato Brasileiro de Futebol.html" class="btn btn-primary" target="_blank">Abrir Relatório Completo →</a>
+</div>
+
+</div>
+:::
+
+:::

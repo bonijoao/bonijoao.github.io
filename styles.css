@@ -1,0 +1,103 @@
+/* Estilo para foto de perfil */
+.profile-photo {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Estilo para títulos */
+h1, h2, h3 {
+  color: #2c3e50;
+}
+
+/* Estilo para links */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo para os cards de destaque */
+.grid {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.thumb-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Estilo para os posts do blog */
+.g-col-6 {
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.g-col-6:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* Estilos para tema escuro */
+[data-theme="dark"] body {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+[data-theme="dark"] h1, 
+[data-theme="dark"] h2, 
+[data-theme="dark"] h3 {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .g-col-6 {
+  border-color: #333;
+  background-color: #242424;
+}
+
+[data-theme="dark"] a {
+  color: #60a5fa;
+}
+
+/* Ajuste para os cards no tema escuro */
+[data-theme="dark"] .listing-card {
+  background-color: #242424;
+  border-color: #333;
+}
+
+/* Animação suave na transição entre temas */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo para imagens de preview dos apps Shiny */
+.preview-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease;
+}
+
+.preview-image:hover {
+  transform: scale(1.02);
+}
+
+/* Ajuste para tema escuro */
+[data-theme="dark"] .preview-image {
+  border-color: #333;
+} 

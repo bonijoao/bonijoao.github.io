@@ -1,0 +1,83 @@
+---
+title: "Aplicativos Shiny"
+description: "Aplicações web interativas desenvolvidas em R Shiny para análise de dados, cálculo de probabilidades e estatística."
+page-layout: full
+embed-resources: true
+---
+
+<div class="hero-banner">
+  <h1 class="hero-title">Aplicativos Shiny</h1>
+  <p class="lead">Ferramentas interativas desenvolvidas em R para explorar conceitos de estatística, modelos de regressão e análise exploratória de dados.</p>
+</div>
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 p-4">
+
+### Calculadora de Probabilidades (ProbCalc)
+<span class="badge-r">R Shiny</span> <span class="badge-tech">Estatística</span> <span class="badge-tech">Multilíngue</span>
+
+Um aplicativo completo para calcular e visualizar distribuições de probabilidade discretas e contínuas. Permite calcular probabilidades acumuladas, quantis e gerar gráficos de densidade com suporte a português, inglês e espanhol.
+
+![](images/probcalc.png){.preview-image}
+
+<div class="mt-3">
+  <a href="https://github.com/bonijoao/probcalc" class="btn btn-primary" target="_blank">Acessar Repositório / App →</a>
+</div>
+
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 p-4">
+
+### Correlação e Regressão Linear (cor_xy)
+<span class="badge-r">R Shiny</span> <span class="badge-tech">Regressão</span> <span class="badge-tech">ggplot2</span>
+
+Ferramenta interativa para medir a correlação linear entre duas variáveis contínuas e ajustar um modelo de regressão linear simples, exibindo o intercepto, coeficiente angular e diagnóstico dos resíduos.
+
+![](images/corxy.png){.preview-image}
+
+<div class="mt-3">
+  <a href="https://joaobonifacio.shinyapps.io/cor_xy/" class="btn btn-primary" target="_blank">Acessar Aplicativo →</a>
+</div>
+
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 p-4">
+
+### Estatística Descritiva (DeSta)
+<span class="badge-r">R Shiny</span> <span class="badge-tech">Análise Descritiva</span> <span class="badge-tech">Tidyverse</span>
+
+Aplicação para análise exploratória descritiva que permite importação de conjuntos de dados, cálculo automático de medidas de posição e dispersão, e geração de gráficos de dispersão e barras.
+
+![](images/desta.png){.preview-image}
+
+<div class="mt-3">
+  <a href="https://joaobonifacio.shinyapps.io/aplicativo_v2/" class="btn btn-primary" target="_blank">Acessar Aplicativo →</a>
+</div>
+
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 p-4">
+
+### Brasileirão Série A
+<span class="badge-r">R Shiny</span> <span class="badge-tech">Futebol</span> <span class="badge-tech">Dados Esportivos</span>
+
+Aplicação para análise comparativa de desempenho de todos os clubes da Série A do Campeonato Brasileiro de Futebol na era dos pontos corridos.
+
+![](images/brasileirao.png){.preview-image}
+
+<div class="mt-3">
+  <a href="https://joaobonifacio.shinyapps.io/brasileirao/" class="btn btn-primary" target="_blank">Acessar Aplicativo →</a>
+</div>
+
+</div>
+:::
+
+:::

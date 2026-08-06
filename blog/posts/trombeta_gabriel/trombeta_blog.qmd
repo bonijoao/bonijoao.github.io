@@ -1,0 +1,239 @@
+---
+title: "Trombeta de Gabriel: Aplicações de Séries com Visualização em R"
+description: "A Trombeta de Gabriel é uma superfície de revolução. Essa curva possui uma propriedade intrigante que a torna famosa na matemática, especialmente devido ao Paradoxo do Pintor."
+author: "João Bonifácio"
+date: "2024-03-20"
+categories: [R, Matemática]
+image: "thumbnail.png"
+format:
+  html:
+    languages:
+    - id: pt
+      label: "Português"
+    - id: en
+      label: "English"
+    toc: true
+    toc-depth: 4
+    toc-title: Sumário
+    embed-resources: true
+    code-fold: true # Código dobrável (para "echo=TRUE")
+    code-tools: true # Botão para mostar o codigo todo
+knitr:
+  opts_chunk: 
+    collapse: true
+theme: lux
+---
+# Trombeta de Gabriel
+
+## Introdução
+
+```{css}
+/*| echo: false */
+p {
+  text-align: justify
+}
+```
+
+:::{.justify}
+
+A Trombeta de Gabriel é uma superfície de revolução obtida pela rotação da curva $y=x^{-1}$, onde $x \in [1,\infty)$.Essa curva possui uma propriedade intrigante que a torna famosa na matemática, especialmente devido ao Paradoxo do Pintor.
+
+Esse paradoxo ilustra que, apesar de a Trombeta de Gabriel ter um volume finito, sua superfície se estende infinitamente. Isso gera uma série de reflexões sobre conceitos como infinito e medidas em matemática.
+
+### Detalhes Adicionais
+* Propriedades Geométricas: A Trombeta de Gabriel possui uma forma cônica que se estreita à medida que se afasta do plano xy. Seu apelo visual e matemático a torna um objeto de estudo fascinante.
+
+* Paradoxo do Pintor: Esse paradoxal fenômeno pode ser descrito assim: um pintor pode pintar a superfície da trombeta, que requer uma área infinita, mas ao mesmo tempo ele só precisaria de uma quantidade finita de tinta para preencher seu volume. Essa contradição desafia nossa intuição sobre dimensões e medidas.
+
+* Aplicações: A Trombeta de Gabriel não é apenas um objeto de curiosidade teórica. Ela serve como uma metáfora em diversos campos da matemática e da física, levando a questionamentos profundos sobre a natureza do infinito.
+
+:::
+
+## Visualização Interativa
+
+:::{.justify}
+Vamos explorar a Trombeta de Gabriel por meio de uma visualização interativa em R. Neste exemplo, usaremos a biblioteca `rgl` para criar uma representação tridimensional da superfície de revolução gerada pela curva $y=x^{-1}$. Abaixo segue o código em R para gerar essa visualização.
+:::
+```{r, warning=FALSE, message=FALSE, fig.width=1, fig.height=1}
+# Instalando e carregando pacotes necessários
+#install.packages("rglwidget", repos="http://R-Forge.R-project.org"))
+#install.packages("rgl")
+library(rgl)
+library(rglwidget)
+
+# Definindo a função para a curva y = 1/x
+curva <- function(x) {
+  ifelse(x > 0, 1 / x, NA)  # Evitar divisão por zero
+}
+
+# Gerando os pontos
+x_values <- seq(1, 10, length.out = 100)
+y_values <- curva(x_values)
+
+# Criando as coordenadas para a superfície de revolução
+theta <- seq(0, 2 * pi, length.out = 30)
+x <- outer(x_values, rep(1, length(theta)))
+y <- outer(y_values, sin(theta))
+z <- outer(y_values, cos(theta))
+
+# Plotando a superfície
+persp3d(x, y, z, col = "lightblue",
+        alpha = 0.8, border = "red",
+        box = FALSE, axes = FALSE, 
+        aspect = TRUE)
+
+# Usando rglwidget para integrar a visualização interativa
+rglwidget()
+```
+
+:::{.justify}
+Nesta visualização, a curva $y = 1/x$ é rotacionada em torno do eixo x para gerar a Trombeta de Gabriel. A superfície resultante é uma forma cônica que se estreita à medida que se afasta do plano xy. A interatividade permite explorar a estrutura tridimensional da trombeta e apreciar sua complexidade geométrica.
+No escrip acima, a função `curva` é definida para gerar os pontos da curva $y = 1/x$ para $x \in [1, 10]$. Em seguida, as coordenadas tridimensionais são criadas para a superfície de revolução, que é plotada usando a função `persp3d`. A visualização interativa é gerada com o uso da função `rglwidget`.
+:::
+
+## Paradoxo do Pintor
+:::{.justify}
+O Paradoxo do Pintor é uma questão intrigante que surge da análise da Trombeta de Gabriel. Como mencionado anteriormente, a superfície da trombeta tem uma área infinita, mas seu volume é finito. Isso desafia nossa intuição sobre dimensões e medidas. Para demonstrar esse paradoxo, vamos demostrar o cálculo do volume e da área da Trombeta de Gabriel.
+:::
+### Cálculo do Volume
+:::{.justify}
+O volume da Trombeta de Gabriel é dado pela integral da função $y = 1/x$ de $x = 1$ a $x = \infty$. A fórmula para o volume é dada por:
+$$V = \int_{1}^{\infty} \pi y^2 dx = \pi \int_{1}^{\infty} \frac{1}{x^2} dx = \pi \left [ \frac{1}{-x} \right ]_{1}^{\infty} = \pi \left [ \displaystyle \lim_{x \to \infty} \frac{1}{x}-(-1) \right ] = \pi $$
+
+desta forma o volume do solido de revolução é finito e igual a $\pi$.
+
+Outra maneira de monstrar que o volume deste sólido é finito é por meio de uma série geométrica.
+
+Para isso, vamos construir cilindos de autura $1$ e raio $1/n$ para $n \in \mathbb{N}$. O volume de cada cilindro é dado por $\pi(1/n)^2 = \pi/n^2$. Cada cilindro é colocado de forma que o raio do cilindro $n$ coincide com a borda do cilindro $n+1$. No código abaixo, vamos visualizar essa construção.
+:::
+```{r}
+
+library(rgl)
+
+# Função da trombeta
+trombeta <- function(x) {
+  ifelse(x > 0, 1/x, NA)
+}
+
+# Parâmetros
+n_cilindros <- 5
+x_values <- seq(1, 5, length.out = 100)
+y_values <- trombeta(x_values)
+theta <- seq(0, 2*pi, length.out = 30)
+
+# Superfície da trombeta
+persp3d(x_values, 
+        outer(y_values, sin(theta)), 
+        outer(y_values, cos(theta)),
+        col = "lightblue", 
+        alpha = 0.5, 
+        border = "pink")
+
+# Cilindros
+for(n in 1:n_cilindros) {
+  radius_n <- 1/n
+  x_cylinder <- seq(n, n+1, length.out = 2)  # Apenas dois pontos para cada cilindro
+  
+  # Criar matrizes para o cilindro
+  theta_matrix <- matrix(theta, nrow = length(theta), ncol = length(x_cylinder))
+  x_matrix <- matrix(rep(x_cylinder, each = length(theta)), 
+                    nrow = length(theta), 
+                    ncol = length(x_cylinder))
+  y_matrix <- radius_n * sin(theta_matrix)
+  z_matrix <- radius_n * cos(theta_matrix)
+  
+  # Plotar cilindro
+  surface3d(x_matrix, 
+           y_matrix, 
+           z_matrix,
+           alpha = 0.2, 
+           col = "red",
+           box = FALSE,
+           axes = FALSE)
+}
+
+# Adicionar eixos e título
+axes3d(box = FALSE, 
+       axes = FALSE, 
+       labels = FALSE)
+rglwidget()
+```
+:::{.justify}
+O script acima, assim como o anterior, utiliza a biblioteca `rgl` para criar uma visualização tridimensional da Trombeta de Gabriel. A função `trombeta` é definida para gerar os pontos da curva $y = 1/x$ para $x \in [1, 5]$. Em seguida, a construção dos cilindros é realizada para ilustrar a ideia de que o volume da trombeta é finito. Cada cilindro tem raio $1/n$ e altura $1$, e a sobreposição desses cilindros forma a trombeta.
+:::
+
+:::{.justify}
+O primeiro cilindro tem volume dado por: $\pi(1/1)^2 = \pi$. O segundo cilindro tem volume dado por: $\pi(1/2)^2 = \pi/4$. O terceiro cilindro tem volume dado por: $\pi(1/3)^2 = \pi/9$. O enésimo cilindro tem volume dado por: $\pi/n^2$. Assim, o volume total é dado pela soma dos volumes de todos os cilindros, ou seja, pela soma da sequencia $\pi/n^2$ para $n \in \mathbb{N}$.
+
+$$ \pi \sum_{n=1}^{\infty} \frac{1}{n^2} =\pi \left [ 1 + \frac{1}{2^2} + \frac{1}{3^2}+\frac{1}{4^2}+\frac{1}{5^2}+\frac{1}{6^2}+\frac{1}{7^2} ... \right ] \leq  1 + \frac{1}{2^2}+\frac{1}{2^2}+\frac{1}{4^2}+\frac{1}{4^2}+\frac{1}{4^2}+\frac{1}{4^2}+... $$ 
+$$ = 1 + \left ( \frac{1}{2^2} + \frac{1}{2^2} \right ) + \left ( \frac{1}{4^2} + \frac{1}{4^2} + \frac{1}{4^2} + \frac{1}{4^2} \right ) + ... = 1 + \frac{1}{2} + \frac{1}{4} + \frac{1}{8} + ... = 2 $$
+Isso prova que o volume da pilha de cilindros externos a trombeta é finito, assim também o volume da trombeta é finito.  
+:::
+### Area
+:::{.justify}
+Para encontrar a area da trombeta, podemos usar uma ideia semelhante a anteriro. Vamos construir uma sequencia de faixas cilindricas, mas desta vez interno a trombeta. Cada faixa cilindrica tem raio $1/n$ e altura $1/n$. A area de cada faixa cilindrica é  $2\pi/(n+1)$. A area total é dada pela soma da sequencia $2\pi/(n+1)$ para $n \in \mathbb{N}$.
+```{r}
+# Função da trombeta
+trombeta <- function(x) {
+  ifelse(x > 0, 1/x, NA)
+}
+
+# Parâmetros
+n_cilindros <- 5
+x_values <- seq(2, 10, length.out = 100)
+y_values <- trombeta(x_values)
+theta <- seq(0, 2*pi, length.out = 30)
+
+# Superfície da trombeta
+persp3d(x_values, 
+        outer(y_values, sin(theta)), 
+        outer(y_values, cos(theta)),
+        col = "lightblue", 
+        alpha = 0.5, 
+        border = "red")
+
+# Cilindros
+for(n in 2:n_cilindros) {
+  radius_n <- 1/(n+1)
+  x_cylinder <- seq(n, n+1, length.out = 2)  # Apenas dois pontos para cada cilindro
+  
+  # Criar matrizes para o cilindro
+  theta_matrix <- matrix(theta, nrow = length(theta), ncol = length(x_cylinder))
+  x_matrix <- matrix(rep(x_cylinder, each = length(theta)), 
+                    nrow = length(theta), 
+                    ncol = length(x_cylinder))
+  y_matrix <- radius_n * sin(theta_matrix)
+  z_matrix <- radius_n * cos(theta_matrix)
+  
+  # Plotar cilindro
+  surface3d(x_matrix, 
+           y_matrix, 
+           z_matrix,
+           alpha = 0.2, 
+           col = "red",
+           box = FALSE,
+           axes = FALSE)
+}
+
+# Adicionar eixos e título
+axes3d(box = FALSE, 
+       axes = FALSE, 
+       labels = FALSE)
+
+rglwidget()
+```
+
+$$A=2\pi\left(\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\frac{1}{5}+\frac{1}{6}+\frac{1}{7}+...+\frac{1}{n}\right)$$
+A soma da sequencia $2\pi/(n+1)$ é uma série armonica divergente, assim a area da trombeta é infinita. Para verificar isso, podemos comparar esta série com uma série menor, se a série menor divergir, a série maior também diverge. Comparando com uma série em potencias de 2, temos:
+$$\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\frac{1}{5}+\frac{1}{6}+\frac{1}{7}+\frac{1}{8}+... > \frac{1}{2}+\frac{1}{4}+\frac{1}{4}+\frac{1}{8}+\frac{1}{8}+\frac{1}{8}+...$$
+
+$$\frac{1}{2}+\left(\frac{1}{4}+\frac{1}{4}\right)+\left(\frac{1}{8}+\frac{1}{8}+\frac{1}{8}\right)...=\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}+...=\infty$$
+Assim, como a série harmônica é maior que a série em potencias de 2, a série harmônica também diverge. Além disso, como construimos uma sequencia de faixas cilindricas internas a trombeta, a area da trombeta é infinita. <br>
+Um paradoxo interessante é que se esta figura fosse construida fisicamente, ela seria capaz de conter uma quantidade finita de tinta pois seu volume é finito, mas como sua superficie é infinita, seria impossivel pintar toda a superficie da trombeta com uma quantidade uniforme de tinta.
+
+:::
+
+## Referências
+
+Boyer, Carl B. (1996). História da matemática. 2ª Edição. São Paulo. Edgard Blücher ltda. ISBN 85-212-0023-4. <br>
+Silva, Mário Olivero da. (2004). Cálculo 2. v.2. 2ª Edição. Rio de Janeiro. Fundação CECIERJ. ISBN 85-7648-046-8.

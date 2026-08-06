@@ -1,0 +1,89 @@
+---
+title: "João Bonifácio"
+subtitle: "Cientista de Dados | Desenvolvedor R | Especialista em Estatística & Shiny"
+page-layout: full
+embed-resources: true
+about:
+  template: trestles
+  image: profile.jpg
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/bonijoao
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/seu-perfil
+    - icon: box-seam
+      text: CRAN
+      href: https://CRAN.R-project.org/package=deriva
+    - icon: envelope
+      text: Email
+      href: mailto:seu.email@exemplo.com
+---
+
+## Bem-vindo ao meu Portfólio! 👋
+
+Sou estatístico e cientista de dados focado na solução de problemas através da programação em **R**, modelagem estatística, criação de **aplicativos Shiny** e desenvolvimento de **pacotes para o CRAN**.
+
+Aqui você encontra meus projetos, artigos técnicos do blog, relatórios de dados e aplicações web interativas.
+
+<div class="mt-4 mb-4">
+  <a href="pacotes/index.qmd" class="btn btn-primary me-2">📦 Pacotes R</a>
+  <a href="shiny/index.qmd" class="btn btn-outline-primary me-2">📊 Shiny Apps</a>
+  <a href="blog/index.qmd" class="btn btn-outline-primary">✍️ Blog</a>
+</div>
+
+---
+
+## 🌟 Destaques
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100 p-3 text-center">
+
+### 📦 Pacotes no CRAN
+<p class="text-muted">Desenvolvimento de pacotes R de código aberto.</p>
+<p>Conheça os pacotes <strong><code>deriva</code></strong> e <strong><code>tidyprf</code></strong> disponíveis oficialmente no CRAN.</p>
+<a href="pacotes/index.qmd" class="btn btn-sm btn-outline-primary mt-auto">Ver Pacotes →</a>
+
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100 p-3 text-center">
+
+### 💻 Aplicativos Shiny
+<p class="text-muted">Ferramentas interativas para análise e simulação.</p>
+<p>Aplicações como ProbCalc, DeSta e análise histórica do Brasileirão Série A.</p>
+<a href="shiny/index.qmd" class="btn btn-sm btn-outline-primary mt-auto">Explorar Apps →</a>
+
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100 p-3 text-center">
+
+### 📝 Blog & Tutoriais
+<p class="text-muted">Artigos práticos de matemática, estatística e R.</p>
+<p>Publicações com exemplos de código, visualização 3D e métodos numéricos.</p>
+<a href="blog/index.qmd" class="btn btn-sm btn-outline-primary mt-auto">Acessar Blog →</a>
+
+</div>
+:::
+
+:::
+
+---
+
+## 🛠️ Tecnologias e Ferramentas
+
+<span class="badge-r">R</span>
+<span class="badge-cran">CRAN Packages</span>
+<span class="badge-tech">Shiny</span>
+<span class="badge-tech">Tidyverse</span>
+<span class="badge-tech">ggplot2</span>
+<span class="badge-tech">Quarto</span>
+<span class="badge-tech">Estatística Multivariada</span>
+<span class="badge-tech">Machine Learning</span>
+<span class="badge-tech">Git & GitHub</span>
