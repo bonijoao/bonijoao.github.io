@@ -11,28 +11,14 @@
     "href": "index.html",
     "title": "João Bonifácio",
     "section": "",
-    "text": "Sou estatístico e cientista de dados focado na solução de problemas através da programação em R, modelagem estatística, criação de aplicativos Shiny e desenvolvimento de pacotes para o CRAN.\nAqui você encontra meus projetos, artigos técnicos do blog, relatórios de dados e aplicações web interativas.\n\n📦 Pacotes R 📊 Shiny Apps ✍️ Blog"
+    "text": "Sou Físico por formação, Bacharelando e Mestrando em Estatística.\nMinha atuação principal e interesses de pesquisa concentram-se em:\n\n🤖 Machine Learning & Aprendizado Estatístico\n📈 Análise e Modelagem de Séries Temporais\n🔄 Estudo de Drifts (Concept Drift) em Séries Temporais\n📦 Desenvolvimento de Pacotes em R e Aplicações Interativas em Shiny\n\n\n\n\nLinguagem R Machine Learning Séries Temporais Concept Drift Pacotes CRAN R Shiny Modelagem Estatística Quarto\n\n\n📦 Pacotes R 📊 Shiny Apps ✍️ Blog 📄 Sobre / CV"
   },
   {
-    "objectID": "index.html#bem-vindo-ao-meu-portfólio",
-    "href": "index.html#bem-vindo-ao-meu-portfólio",
+    "objectID": "index.html#olá-sou-o-joão-bonifácio",
+    "href": "index.html#olá-sou-o-joão-bonifácio",
     "title": "João Bonifácio",
     "section": "",
-    "text": "Sou estatístico e cientista de dados focado na solução de problemas através da programação em R, modelagem estatística, criação de aplicativos Shiny e desenvolvimento de pacotes para o CRAN.\nAqui você encontra meus projetos, artigos técnicos do blog, relatórios de dados e aplicações web interativas.\n\n📦 Pacotes R 📊 Shiny Apps ✍️ Blog"
-  },
-  {
-    "objectID": "index.html#destaques",
-    "href": "index.html#destaques",
-    "title": "João Bonifácio",
-    "section": "🌟 Destaques",
-    "text": "🌟 Destaques\n\n\n\n📦 Pacotes no CRAN\n\nDesenvolvimento de pacotes R de código aberto.\n\n\nConheça os pacotes deriva e tidyprf disponíveis oficialmente no CRAN.\n\nVer Pacotes →\n\n\n\n\n💻 Aplicativos Shiny\n\nFerramentas interativas para análise e simulação.\n\n\nAplicações como ProbCalc, DeSta e análise histórica do Brasileirão Série A.\n\nExplorar Apps →\n\n\n\n\n📝 Blog & Tutoriais\n\nArtigos práticos de matemática, estatística e R.\n\n\nPublicações com exemplos de código, visualização 3D e métodos numéricos.\n\nAcessar Blog →"
-  },
-  {
-    "objectID": "index.html#tecnologias-e-ferramentas",
-    "href": "index.html#tecnologias-e-ferramentas",
-    "title": "João Bonifácio",
-    "section": "🛠️ Tecnologias e Ferramentas",
-    "text": "🛠️ Tecnologias e Ferramentas\nR CRAN Packages Shiny Tidyverse ggplot2 Quarto Estatística Multivariada Machine Learning Git & GitHub"
+    "text": "Sou Físico por formação, Bacharelando e Mestrando em Estatística.\nMinha atuação principal e interesses de pesquisa concentram-se em:\n\n🤖 Machine Learning & Aprendizado Estatístico\n📈 Análise e Modelagem de Séries Temporais\n🔄 Estudo de Drifts (Concept Drift) em Séries Temporais\n📦 Desenvolvimento de Pacotes em R e Aplicações Interativas em Shiny\n\n\n\n\nLinguagem R Machine Learning Séries Temporais Concept Drift Pacotes CRAN R Shiny Modelagem Estatística Quarto\n\n\n📦 Pacotes R 📊 Shiny Apps ✍️ Blog 📄 Sobre / CV"
   },
   {
     "objectID": "blog/posts/trombeta_gabriel/trombeta_blog.html",
@@ -200,14 +186,14 @@
     "href": "cv.html",
     "title": "Sobre & Currículo",
     "section": "",
-    "text": "Sou Especialista em Análise de Dados, Estatística e Desenvolvimento em R. Tenho experiência no desenvolvimento de pacotes R publicados no CRAN, criação de aplicações interativas em Shiny, análise exploratória e estatística, além da construção de relatórios dinâmicos e reprodutíveis em Quarto.\n\n\n\n\nUniversidade Federal de Lavras (UFLA)\nGraduação / Formação em Estatística / Ciência de Dados\n\n\n\n\n\nLinguagem R Shiny Apps Pacotes CRAN Tidyverse Estatística & Probabilidade Modelagem de Regressão Quarto / R Markdown Análise Multivariada & PCA Git & GitHub\n\n\n\n\n\nderiva: Métodos numéricos para derivadas e cálculo funcional em R.\ntidyprf: Ferramenta baseada nos princípios tidyverse para manipulação e estruturação de dados.\n\n\n\n\n\n\nAplicações Shiny:\n\nProbCalc: Calculadora de distribuições de probabilidade com suporte multilíngue.\ncor_xy: Análise de correlação e regressão linear simples interativa.\nDeSta: Estatística descritiva e gerador de gráficos.\nBrasileirão: Análise de desempenho histórico da Série A dos pontos corridos.\n\nRelatórios & Análises:\n\nAnálise exploratória das condições de Saneamento Básico vs Esquistossomose em MG.\nAnálise de Componentes Principais (PCA) na gestão de resíduos sólidos em MG.\nRegressão Polinomial e caracterização temporal de sensores de radiação UV."
+    "text": "Sou Físico formado, Bacharelando e Mestrando em Estatística. Minhas pesquisas e projetos profissionais estão focados em Machine Learning, Análise de Séries Temporais e no Estudo de Drifts (Concept Drift) em Séries Temporais.\nAlém da pesquisa teórica e aplicada, desenvolvo ferramentas de código aberto em R, com pacotes publicados no CRAN e aplicativos interativos em Shiny.\n\n\n\n\nMestrado em Estatística\nUniversidade Federal de Lavras (UFLA) (Em andamento)\nBacharelado em Estatística\nUniversidade Federal de Lavras (UFLA) (Em andamento)\nGraduação em Física\nBacharelado/Licenciatura em Física\n\n\n\n\n\n\nSéries Temporais & Concept Drift: Detecção, monitoramento e adaptação a mudanças de padrão (drifts) em dados sequenciais e temporais.\nMachine Learning & Aprendizado Estatístico: Modelos preditivos, métodos supervisionados e não supervisionados aplicados a dados complexos.\nDesenvolvimento em R: Criação de pacotes para o CRAN, Shiny Apps e reproduzibilidade científica com Quarto.\n\n\n\n\n\nLinguagem R Machine Learning Séries Temporais Concept Drift Pacotes CRAN R Shiny Modelagem Estatística Quarto / R Markdown Git & GitHub\n\n\n\n\n\nORCID: 0009-0009-2335-8391\nCurrículo Lattes: http://lattes.cnpq.br/5140906846177048\n\n\n\n\n\n\nderiva: Métodos numéricos para derivadas e análise funcional em R.\ntidyprf: Ferramenta baseada nos princípios tidyverse para manipulação e estruturação de dados."
   },
   {
     "objectID": "cv.html#joão-bonifácio",
     "href": "cv.html#joão-bonifácio",
     "title": "Sobre & Currículo",
     "section": "",
-    "text": "Sou Especialista em Análise de Dados, Estatística e Desenvolvimento em R. Tenho experiência no desenvolvimento de pacotes R publicados no CRAN, criação de aplicações interativas em Shiny, análise exploratória e estatística, além da construção de relatórios dinâmicos e reprodutíveis em Quarto.\n\n\n\n\nUniversidade Federal de Lavras (UFLA)\nGraduação / Formação em Estatística / Ciência de Dados\n\n\n\n\n\nLinguagem R Shiny Apps Pacotes CRAN Tidyverse Estatística & Probabilidade Modelagem de Regressão Quarto / R Markdown Análise Multivariada & PCA Git & GitHub\n\n\n\n\n\nderiva: Métodos numéricos para derivadas e cálculo funcional em R.\ntidyprf: Ferramenta baseada nos princípios tidyverse para manipulação e estruturação de dados.\n\n\n\n\n\n\nAplicações Shiny:\n\nProbCalc: Calculadora de distribuições de probabilidade com suporte multilíngue.\ncor_xy: Análise de correlação e regressão linear simples interativa.\nDeSta: Estatística descritiva e gerador de gráficos.\nBrasileirão: Análise de desempenho histórico da Série A dos pontos corridos.\n\nRelatórios & Análises:\n\nAnálise exploratória das condições de Saneamento Básico vs Esquistossomose em MG.\nAnálise de Componentes Principais (PCA) na gestão de resíduos sólidos em MG.\nRegressão Polinomial e caracterização temporal de sensores de radiação UV."
+    "text": "Sou Físico formado, Bacharelando e Mestrando em Estatística. Minhas pesquisas e projetos profissionais estão focados em Machine Learning, Análise de Séries Temporais e no Estudo de Drifts (Concept Drift) em Séries Temporais.\nAlém da pesquisa teórica e aplicada, desenvolvo ferramentas de código aberto em R, com pacotes publicados no CRAN e aplicativos interativos em Shiny.\n\n\n\n\nMestrado em Estatística\nUniversidade Federal de Lavras (UFLA) (Em andamento)\nBacharelado em Estatística\nUniversidade Federal de Lavras (UFLA) (Em andamento)\nGraduação em Física\nBacharelado/Licenciatura em Física\n\n\n\n\n\n\nSéries Temporais & Concept Drift: Detecção, monitoramento e adaptação a mudanças de padrão (drifts) em dados sequenciais e temporais.\nMachine Learning & Aprendizado Estatístico: Modelos preditivos, métodos supervisionados e não supervisionados aplicados a dados complexos.\nDesenvolvimento em R: Criação de pacotes para o CRAN, Shiny Apps e reproduzibilidade científica com Quarto.\n\n\n\n\n\nLinguagem R Machine Learning Séries Temporais Concept Drift Pacotes CRAN R Shiny Modelagem Estatística Quarto / R Markdown Git & GitHub\n\n\n\n\n\nORCID: 0009-0009-2335-8391\nCurrículo Lattes: http://lattes.cnpq.br/5140906846177048\n\n\n\n\n\n\nderiva: Métodos numéricos para derivadas e análise funcional em R.\ntidyprf: Ferramenta baseada nos princípios tidyverse para manipulação e estruturação de dados."
   },
   {
     "objectID": "pacotes/index.html",

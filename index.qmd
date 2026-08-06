@@ -1,11 +1,11 @@
 ---
 title: "João Bonifácio"
-subtitle: "Cientista de Dados | Desenvolvedor R | Especialista em Estatística & Shiny"
+subtitle: "Físico | Estatístico | Pesquisador em Machine Learning & Séries Temporais"
 page-layout: full
 embed-resources: true
 about:
   template: trestles
-  image: profile.jpg
+  image: profile.png
   links:
     - icon: github
       text: GitHub
@@ -13,77 +13,46 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/seu-perfil
+    - icon: journal-bookmark
+      text: ORCID
+      href: https://orcid.org/0009-0009-2335-8391
+    - icon: file-person
+      text: Lattes
+      href: http://lattes.cnpq.br/5140906846177048
     - icon: box-seam
       text: CRAN
       href: https://CRAN.R-project.org/package=deriva
-    - icon: envelope
-      text: Email
-      href: mailto:seu.email@exemplo.com
 ---
 
-## Bem-vindo ao meu Portfólio! 👋
+## Olá! Sou o João Bonifácio 👋
 
-Sou estatístico e cientista de dados focado na solução de problemas através da programação em **R**, modelagem estatística, criação de **aplicativos Shiny** e desenvolvimento de **pacotes para o CRAN**.
+Sou **Físico** por formação, **Bacharelando e Mestrando em Estatística**.
 
-Aqui você encontra meus projetos, artigos técnicos do blog, relatórios de dados e aplicações web interativas.
+Minha atuação principal e interesses de pesquisa concentram-se em:
 
-<div class="mt-4 mb-4">
+- 🤖 **Machine Learning & Aprendizado Estatístico**
+- 📈 **Análise e Modelagem de Séries Temporais**
+- 🔄 **Estudo de Drifts (Concept Drift) em Séries Temporais**
+- 📦 **Desenvolvimento de Pacotes em R** e **Aplicações Interativas em Shiny**
+
+---
+
+### 🛠️ Stacks & Áreas de Interação
+
+<span class="badge-r">Linguagem R</span>
+<span class="badge-tech">Machine Learning</span>
+<span class="badge-tech">Séries Temporais</span>
+<span class="badge-tech">Concept Drift</span>
+<span class="badge-cran">Pacotes CRAN</span>
+<span class="badge-tech">R Shiny</span>
+<span class="badge-tech">Modelagem Estatística</span>
+<span class="badge-tech">Quarto</span>
+
+---
+
+<div class="mt-4">
   <a href="pacotes/index.qmd" class="btn btn-primary me-2">📦 Pacotes R</a>
   <a href="shiny/index.qmd" class="btn btn-outline-primary me-2">📊 Shiny Apps</a>
-  <a href="blog/index.qmd" class="btn btn-outline-primary">✍️ Blog</a>
+  <a href="blog/index.qmd" class="btn btn-outline-primary me-2">✍️ Blog</a>
+  <a href="cv.qmd" class="btn btn-outline-primary">📄 Sobre / CV</a>
 </div>
-
----
-
-## 🌟 Destaques
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-4}
-<div class="card h-100 p-3 text-center">
-
-### 📦 Pacotes no CRAN
-<p class="text-muted">Desenvolvimento de pacotes R de código aberto.</p>
-<p>Conheça os pacotes <strong><code>deriva</code></strong> e <strong><code>tidyprf</code></strong> disponíveis oficialmente no CRAN.</p>
-<a href="pacotes/index.qmd" class="btn btn-sm btn-outline-primary mt-auto">Ver Pacotes →</a>
-
-</div>
-:::
-
-::: {.g-col-12 .g-col-md-4}
-<div class="card h-100 p-3 text-center">
-
-### 💻 Aplicativos Shiny
-<p class="text-muted">Ferramentas interativas para análise e simulação.</p>
-<p>Aplicações como ProbCalc, DeSta e análise histórica do Brasileirão Série A.</p>
-<a href="shiny/index.qmd" class="btn btn-sm btn-outline-primary mt-auto">Explorar Apps →</a>
-
-</div>
-:::
-
-::: {.g-col-12 .g-col-md-4}
-<div class="card h-100 p-3 text-center">
-
-### 📝 Blog & Tutoriais
-<p class="text-muted">Artigos práticos de matemática, estatística e R.</p>
-<p>Publicações com exemplos de código, visualização 3D e métodos numéricos.</p>
-<a href="blog/index.qmd" class="btn btn-sm btn-outline-primary mt-auto">Acessar Blog →</a>
-
-</div>
-:::
-
-:::
-
----
-
-## 🛠️ Tecnologias e Ferramentas
-
-<span class="badge-r">R</span>
-<span class="badge-cran">CRAN Packages</span>
-<span class="badge-tech">Shiny</span>
-<span class="badge-tech">Tidyverse</span>
-<span class="badge-tech">ggplot2</span>
-<span class="badge-tech">Quarto</span>
-<span class="badge-tech">Estatística Multivariada</span>
-<span class="badge-tech">Machine Learning</span>
-<span class="badge-tech">Git & GitHub</span>

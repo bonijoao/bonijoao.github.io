@@ -4,7 +4,7 @@ page-layout: full
 embed-resources: true
 about:
   template: trestles
-  image: profile.jpg
+  image: profile.png
   links:
     - icon: github
       text: GitHub
@@ -12,6 +12,12 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/seu-perfil
+    - icon: journal-bookmark
+      text: ORCID
+      href: https://orcid.org/0009-0009-2335-8391
+    - icon: file-person
+      text: Currículo Lattes
+      href: http://lattes.cnpq.br/5140906846177048
     - icon: envelope
       text: Email
       href: mailto:seu.email@exemplo.com
@@ -19,46 +25,53 @@ about:
 
 ## João Bonifácio 👋
 
-Sou **Especialista em Análise de Dados, Estatística e Desenvolvimento em R**. Tenho experiência no desenvolvimento de pacotes R publicados no **CRAN**, criação de aplicações interativas em **Shiny**, análise exploratória e estatística, além da construção de relatórios dinâmicos e reprodutíveis em Quarto.
+Sou **Físico formado**, **Bacharelando e Mestrando em Estatística**. Minhas pesquisas e projetos profissionais estão focados em **Machine Learning**, **Análise de Séries Temporais** e no **Estudo de Drifts (Concept Drift) em Séries Temporais**.
+
+Além da pesquisa teórica e aplicada, desenvolvo ferramentas de código aberto em **R**, com pacotes publicados no **CRAN** e aplicativos interativos em **Shiny**.
 
 ---
 
 ### 🎓 Formação Acadêmica
 
-- **Universidade Federal de Lavras (UFLA)**  
-  *Graduação / Formação em Estatística / Ciência de Dados*
+- **Mestrado em Estatística**  
+  *Universidade Federal de Lavras (UFLA)* (Em andamento)
+- **Bacharelado em Estatística**  
+  *Universidade Federal de Lavras (UFLA)* (Em andamento)
+- **Graduação em Física**  
+  *Bacharelado/Licenciatura em Física*
+
+---
+
+### 🔬 Linhas de Pesquisa e Interesses
+
+- **Séries Temporais & Concept Drift**: Detecção, monitoramento e adaptação a mudanças de padrão (drifts) em dados sequenciais e temporais.
+- **Machine Learning & Aprendizado Estatístico**: Modelos preditivos, métodos supervisionados e não supervisionados aplicados a dados complexos.
+- **Desenvolvimento em R**: Criação de pacotes para o CRAN, Shiny Apps e reproduzibilidade científica com Quarto.
 
 ---
 
 ### 🛠️ Habilidades Técnicas
 
 <span class="badge-r">Linguagem R</span>
-<span class="badge-tech">Shiny Apps</span>
+<span class="badge-tech">Machine Learning</span>
+<span class="badge-tech">Séries Temporais</span>
+<span class="badge-tech">Concept Drift</span>
 <span class="badge-cran">Pacotes CRAN</span>
-<span class="badge-tech">Tidyverse</span>
-<span class="badge-tech">Estatística & Probabilidade</span>
-<span class="badge-tech">Modelagem de Regressão</span>
+<span class="badge-tech">R Shiny</span>
+<span class="badge-tech">Modelagem Estatística</span>
 <span class="badge-tech">Quarto / R Markdown</span>
-<span class="badge-tech">Análise Multivariada & PCA</span>
 <span class="badge-tech">Git & GitHub</span>
+
+---
+
+### 🔗 Links Acadêmicos & Científicos
+
+- **ORCID**: [0009-0009-2335-8391](https://orcid.org/0009-0009-2335-8391)
+- **Currículo Lattes**: [http://lattes.cnpq.br/5140906846177048](http://lattes.cnpq.br/5140906846177048)
 
 ---
 
 ### 📦 Pacotes R Publicados no CRAN
 
-1. **[`deriva`](https://CRAN.R-project.org/package=deriva)**: Métodos numéricos para derivadas e cálculo funcional em R.
+1. **[`deriva`](https://CRAN.R-project.org/package=deriva)**: Métodos numéricos para derivadas e análise funcional em R.
 2. **[`tidyprf`](https://CRAN.R-project.org/package=tidyprf)**: Ferramenta baseada nos princípios tidyverse para manipulação e estruturação de dados.
-
----
-
-### 🚀 Principais Projetos
-
-- **Aplicações Shiny**:
-  - *ProbCalc*: Calculadora de distribuições de probabilidade com suporte multilíngue.
-  - *cor_xy*: Análise de correlação e regressão linear simples interativa.
-  - *DeSta*: Estatística descritiva e gerador de gráficos.
-  - *Brasileirão*: Análise de desempenho histórico da Série A dos pontos corridos.
-- **Relatórios & Análises**:
-  - Análise exploratória das condições de Saneamento Básico vs Esquistossomose em MG.
-  - Análise de Componentes Principais (PCA) na gestão de resíduos sólidos em MG.
-  - Regressão Polinomial e caracterização temporal de sensores de radiação UV.
