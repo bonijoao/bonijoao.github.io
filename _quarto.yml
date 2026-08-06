@@ -27,9 +27,9 @@ website:
         href: https://github.com/bonijoao
       - icon: linkedin
         href: https://linkedin.com/in/seu-perfil
-      - icon: journal-bookmark
+      - text: ORCID
         href: https://orcid.org/0009-0009-2335-8391
-      - icon: file-person
+      - text: Lattes
         href: http://lattes.cnpq.br/5140906846177048
       - text: ""
         href: "#"

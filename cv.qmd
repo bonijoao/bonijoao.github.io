@@ -5,6 +5,7 @@ embed-resources: true
 about:
   template: trestles
   image: profile.png
+  image-shape: round
   links:
     - icon: github
       text: GitHub
@@ -12,26 +13,24 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/seu-perfil
-    - icon: journal-bookmark
-      text: ORCID
+    - text: ORCID
       href: https://orcid.org/0009-0009-2335-8391
-    - icon: file-person
-      text: Currículo Lattes
+    - text: Currículo Lattes
       href: http://lattes.cnpq.br/5140906846177048
     - icon: envelope
       text: Email
       href: mailto:seu.email@exemplo.com
 ---
 
-## João Bonifácio 👋
+## João Bonifácio
 
-Sou **Físico formado**, **Bacharelando e Mestrando em Estatística**. Minhas pesquisas e projetos profissionais estão focados em **Machine Learning**, **Análise de Séries Temporais** e no **Estudo de Drifts (Concept Drift) em Séries Temporais**.
+Sou Físico formado, Bacharelando e Mestrando em Estatística. Minhas pesquisas e projetos profissionais estão focados em Machine Learning, Análise de Séries Temporais e no Estudo de Drifts (Concept Drift) em Séries Temporais.
 
-Além da pesquisa teórica e aplicada, desenvolvo ferramentas de código aberto em **R**, com pacotes publicados no **CRAN** e aplicativos interativos em **Shiny**.
+Além da pesquisa teórica e aplicada, desenvolvo ferramentas de código aberto em R, com pacotes publicados no CRAN e aplicativos interativos em Shiny.
 
 ---
 
-### 🎓 Formação Acadêmica
+### Formação Acadêmica
 
 - **Mestrado em Estatística**  
   *Universidade Federal de Lavras (UFLA)* (Em andamento)
@@ -42,7 +41,7 @@ Além da pesquisa teórica e aplicada, desenvolvo ferramentas de código aberto 
 
 ---
 
-### 🔬 Linhas de Pesquisa e Interesses
+### Linhas de Pesquisa e Interesses
 
 - **Séries Temporais & Concept Drift**: Detecção, monitoramento e adaptação a mudanças de padrão (drifts) em dados sequenciais e temporais.
 - **Machine Learning & Aprendizado Estatístico**: Modelos preditivos, métodos supervisionados e não supervisionados aplicados a dados complexos.
@@ -50,7 +49,7 @@ Além da pesquisa teórica e aplicada, desenvolvo ferramentas de código aberto 
 
 ---
 
-### 🛠️ Habilidades Técnicas
+### Habilidades Técnicas
 
 <span class="badge-r">Linguagem R</span>
 <span class="badge-tech">Machine Learning</span>
@@ -64,14 +63,14 @@ Além da pesquisa teórica e aplicada, desenvolvo ferramentas de código aberto 
 
 ---
 
-### 🔗 Links Acadêmicos & Científicos
+### Links Acadêmicos & Científicos
 
 - **ORCID**: [0009-0009-2335-8391](https://orcid.org/0009-0009-2335-8391)
 - **Currículo Lattes**: [http://lattes.cnpq.br/5140906846177048](http://lattes.cnpq.br/5140906846177048)
 
 ---
 
-### 📦 Pacotes R Publicados no CRAN
+### Pacotes R Publicados no CRAN
 
 1. **[`deriva`](https://CRAN.R-project.org/package=deriva)**: Métodos numéricos para derivadas e análise funcional em R.
 2. **[`tidyprf`](https://CRAN.R-project.org/package=tidyprf)**: Ferramenta baseada nos princípios tidyverse para manipulação e estruturação de dados.
