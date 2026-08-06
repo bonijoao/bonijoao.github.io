@@ -41,6 +41,31 @@ code, pre, .sourceCode {
   color: #ffffff !important;
 }
 
+/* Icones Customizados para ORCID e Lattes */
+.bi-orcid::before {
+  content: "" !important;
+  display: inline-block !important;
+  width: 1.1em !important;
+  height: 1.1em !important;
+  background-color: currentColor !important;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z"/><path fill="white" d="M86.3 186.2H70.9V79.1h15.4v107.1zM108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.5-56.8 53.5h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.1-26.6 42.1-39.7 0-20.4-12.7-39.7-41.6-39.7h-25v79.4zM78.6 63.8c-5.4 0-9.8-4.4-9.8-9.8s4.4-9.8 9.8-9.8 9.8 4.4 9.8 9.8-4.4 9.8-9.8 9.8z"/></svg>') no-repeat center / contain !important;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M256 128c0 70.7-57.3 128-128 128S0 198.7 0 128 57.3 0 128 0s128 57.3 128 128z"/><path fill="white" d="M86.3 186.2H70.9V79.1h15.4v107.1zM108.9 79.1h41.6c39.6 0 57 28.3 57 53.6 0 27.5-21.5 53.5-56.8 53.5h-41.8V79.1zm15.4 93.3h24.5c34.9 0 42.1-26.6 42.1-39.7 0-20.4-12.7-39.7-41.6-39.7h-25v79.4zM78.6 63.8c-5.4 0-9.8-4.4-9.8-9.8s4.4-9.8 9.8-9.8 9.8 4.4 9.8 9.8-4.4 9.8-9.8 9.8z"/></svg>') no-repeat center / contain !important;
+  vertical-align: -0.15em !important;
+  margin-right: 0.25em !important;
+}
+
+.bi-lattes::before {
+  content: "" !important;
+  display: inline-block !important;
+  width: 1.1em !important;
+  height: 1.1em !important;
+  background-color: currentColor !important;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3L1 9l11 6l9-4.91V17h2V9L12 3zM3.82 9L12 4.54L20.18 9L12 13.46L3.82 9zM5 13.15v4.63l7 3.82l7-3.82v-4.63l-7 3.82l-7-3.82z"/></svg>') no-repeat center / contain !important;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3L1 9l11 6l9-4.91V17h2V9L12 3zM3.82 9L12 4.54L20.18 9L12 13.46L3.82 9zM5 13.15v4.63l7 3.82l7-3.82v-4.63l-7 3.82l-7-3.82z"/></svg>') no-repeat center / contain !important;
+  vertical-align: -0.15em !important;
+  margin-right: 0.25em !important;
+}
+
 /* Estilo para Foto de Perfil Redonda / Círculo Perfeito */
 .about-entity img, 
 .about-image, 

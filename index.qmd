@@ -14,13 +14,12 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/seu-perfil
-    - text: ORCID
+    - icon: orcid
+      text: ORCID
       href: https://orcid.org/0009-0009-2335-8391
-    - text: Lattes
+    - icon: lattes
+      text: Lattes
       href: http://lattes.cnpq.br/5140906846177048
-    - icon: box-seam
-      text: CRAN
-      href: https://CRAN.R-project.org/package=deriva
 ---
 
 ## Hello! I'm João Bonifácio
