@@ -16,7 +16,7 @@ about:
       href: https://linkedin.com/in/seu-perfil
     - text: "<img src='images/orcid.svg' style='width: 16px; height: 16px; margin-right: 6px; vertical-align: -2px;' /> ORCID"
       href: https://orcid.org/0009-0009-2335-8391
-    - text: "<img src='images/lattes.svg' style='width: 16px; height: 16px; margin-right: 6px; vertical-align: -2px;' /> Lattes"
+    - text: "<img src='images/lattes.png' style='width: 16px; height: 16px; margin-right: 6px; vertical-align: -2px;' /> Lattes"
       href: http://lattes.cnpq.br/5140906846177048
 ---
 
@@ -49,6 +49,5 @@ My main research and professional work focus on:
 <div class="mt-4">
   <a href="pacotes/index.qmd" class="btn btn-primary me-2">R Packages</a>
   <a href="shiny/index.qmd" class="btn btn-outline-primary me-2">Shiny Apps</a>
-  <a href="blog/index.qmd" class="btn btn-outline-primary me-2">Blog</a>
-  <a href="cv.qmd" class="btn btn-outline-primary">About / CV</a>
+  <a href="about.qmd" class="btn btn-outline-primary">About</a>
 </div>

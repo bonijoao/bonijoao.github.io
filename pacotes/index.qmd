@@ -1,13 +1,13 @@
 ---
-title: "Pacotes R"
-description: "Pacotes desenvolvidos e publicados no CRAN (Comprehensive R Archive Network) e GitHub."
+title: "R Packages"
+description: "Open-source R packages published on CRAN and GitHub."
 page-layout: full
 embed-resources: true
 ---
 
 <div class="hero-banner">
-  <h1 class="hero-title">Pacotes R</h1>
-  <p class="lead">Projetos de código aberto e pacotes R desenvolvidos para resolver problemas de análise de dados, estatística e computação.</p>
+  <h1 class="hero-title">R Packages</h1>
+  <p class="lead">Open-source R packages developed for statistical modeling, stream monitoring, and efficient data access.</p>
 </div>
 
 ::: {.grid}
@@ -17,22 +17,24 @@ embed-resources: true
 
 ### `deriva` <span class="badge-cran">CRAN</span> <span class="badge-r">R Package</span>
 
-Pacote R publicado no CRAN para cálculos e estimativas numéricas de derivadas e análise matemática funcional.
+**Tidy Drift Detection for Monitored Machine Learning Models**
 
-**Instalação via CRAN:**
+Detects concept drift and data drift in streams produced by deployed machine learning models, using a tidy interface that composes with the `tidymodels` ecosystem. Detectors are specified, fitted on a baseline period, and advanced over new batches of observations, returning tibbles annotated with warning and drift flags.
+
+#### Installation
+
 ```r
+# Official CRAN release
 install.packages("deriva")
-```
 
-**Instalação via GitHub:**
-```r
+# Development version from GitHub
 # install.packages("remotes")
 remotes::install_github("bonijoao/deriva")
 ```
 
 <div class="mt-4">
-  <a href="https://CRAN.R-project.org/package=deriva" class="btn btn-primary me-2" target="_blank">Página no CRAN →</a>
-  <a href="https://github.com/bonijoao/deriva" class="btn btn-outline-primary" target="_blank">GitHub</a>
+  <a href="https://CRAN.R-project.org/package=deriva" class="btn btn-primary me-2" target="_blank">CRAN Package Page →</a>
+  <a href="https://github.com/bonijoao/deriva" class="btn btn-outline-primary" target="_blank">GitHub Repository</a>
 </div>
 
 </div>
@@ -43,22 +45,24 @@ remotes::install_github("bonijoao/deriva")
 
 ### `tidyprf` <span class="badge-cran">CRAN</span> <span class="badge-r">R Package</span>
 
-Pacote R desenvolvido com foco no ecossistema tidyverse para processamento, filtragem e manipulação simplificada de dados.
+**Tidy Access to Brazilian Federal Highway Police ('PRF') Data**
 
-**Instalação via CRAN:**
+Downloads and reads Brazilian Federal Highway Police ('PRF') open data on traffic accidents by person, by occurrence, and traffic violations. Designed around tidyverse principles for fast and reproducible data analysis.
+
+#### Installation
+
 ```r
+# Official CRAN release
 install.packages("tidyprf")
-```
 
-**Instalação via GitHub:**
-```r
+# Development version from GitHub
 # install.packages("remotes")
 remotes::install_github("bonijoao/tidyprf")
 ```
 
 <div class="mt-4">
-  <a href="https://CRAN.R-project.org/package=tidyprf" class="btn btn-primary me-2" target="_blank">Página no CRAN →</a>
-  <a href="https://github.com/bonijoao/tidyprf" class="btn btn-outline-primary" target="_blank">GitHub</a>
+  <a href="https://CRAN.R-project.org/package=tidyprf" class="btn btn-primary me-2" target="_blank">CRAN Package Page →</a>
+  <a href="https://github.com/bonijoao/tidyprf" class="btn btn-outline-primary" target="_blank">GitHub Repository</a>
 </div>
 
 </div>

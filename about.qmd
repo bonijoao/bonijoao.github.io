@@ -17,9 +17,6 @@ about:
       href: https://orcid.org/0009-0009-2335-8391
     - text: "<img src='images/lattes.png' style='width: 16px; height: 16px; margin-right: 6px; vertical-align: -2px;' /> Lattes"
       href: http://lattes.cnpq.br/5140906846177048
-    - icon: envelope
-      text: Email
-      href: mailto:seu.email@exemplo.com
 ---
 
 ::: {.panel-tabset}
@@ -28,9 +25,9 @@ about:
 
 ### João Paulo Assis Bonifácio
 
-Physicist with a B.Sc. from Universidade Federal de Itajubá (**UNIFEI**), currently pursuing a B.Sc. in Statistics and an M.Sc. in Statistics and Agricultural Experimentation at Universidade Federal de Lavras (**UFLA**), supported by a **CNPq** graduate scholarship.
+Physicist with a B.Ed. from Universidade Federal de Itajubá (**UNIFEI**), currently pursuing a B.Sc. in Statistics and an M.Sc. in Statistics and Agricultural Experimentation at Universidade Federal de Lavras (**UFLA**), supported by a **CNPq** graduate scholarship.
 
-My research and professional work focus on **Applied Statistics**, **Predictive Modeling**, **Time Series Analysis** (with emphasis on agricultural markets and animal nutrition), **Concept Drift** detection, and **Business Intelligence (BI)**. Additionally, I develop open-source tools in R with packages published on CRAN, interactive Shiny web apps, and INPI-registered software.
+My research and professional work focus on **Applied Statistics**, **Predictive Modeling**, **Time Series Analysis** (with emphasis on agricultural markets and animal nutrition), **Concept Drift** detection, and **Business Intelligence (BI)**.
 
 ---
 
@@ -44,16 +41,16 @@ My research and professional work focus on **Applied Statistics**, **Predictive 
 - **B.Sc. in Statistics** (In progress)  
   *Universidade Federal de Lavras (UFLA)*
 
-- **B.Sc. in Physics** (2016 – 2021)  
+- **B.Ed. in Physics** (2016 – 2021)  
   *Universidade Federal de Itajubá (UNIFEI)*  
-  - B.Sc. Thesis: *Theoretical Frameworks of Rural Education Studies Presented at SNEF from 2001 to 2021*.  
+  - B.Ed. Thesis: *Theoretical Frameworks of Rural Education Studies Presented at SNEF from 2001 to 2021*.  
   - Advisor: Prof. Dr. Newton de Figueiredo Filho.
 
 ---
 
 ### Professional Experience
 
-- **Universidade Federal de Lavras (UFLA)** (2024 – Present)  
+- **Universidade Federal de Lavras (UFLA)** (2024 – 2025)  
   *Graduate Researcher / CNPq M.Sc. Scholar*  
   Conducting research focused on applied statistics for agricultural data, time series forecasting, and predictive modeling in agribusiness.
 
@@ -119,9 +116,9 @@ My research and professional work focus on **Applied Statistics**, **Predictive 
 <span class="badge-tech">Machine Learning</span>
 <span class="badge-tech">Time Series</span>
 <span class="badge-tech">Concept Drift</span>
-<span class="badge-cran">Pacotes CRAN</span>
+<span class="badge-cran">CRAN Packages</span>
 <span class="badge-tech">R Shiny</span>
-<span class="badge-tech">Modelagem Estatística</span>
+<span class="badge-tech">Statistical Modeling</span>
 <span class="badge-tech">Data Governance</span>
 <span class="badge-tech">Python</span>
 <span class="badge-tech">Quarto / R Markdown</span>

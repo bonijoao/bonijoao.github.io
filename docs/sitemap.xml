@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bonijoao.github.io/shiny/index.html</loc>
-    <lastmod>2026-08-06T17:35:26.696Z</lastmod>
+    <lastmod>2026-08-07T00:34:47.148Z</lastmod>
   </url>
   <url>
     <loc>https://bonijoao.github.io/index.html</loc>
-    <lastmod>2026-08-06T23:11:35.417Z</lastmod>
+    <lastmod>2026-08-07T00:37:08.750Z</lastmod>
   </url>
   <url>
     <loc>https://bonijoao.github.io/blog/posts/trombeta_gabriel/trombeta_blog.html</loc>
@@ -19,6 +19,10 @@
   <url>
     <loc>https://bonijoao.github.io/blog/index.html</loc>
     <lastmod>2026-08-06T17:35:31.456Z</lastmod>
+  </url>
+  <url>
+    <loc>https://bonijoao.github.io/about.html</loc>
+    <lastmod>2026-08-07T00:10:44.945Z</lastmod>
   </url>
   <url>
     <loc>https://bonijoao.github.io/analises/index.html</loc>
@@ -34,10 +38,10 @@
   </url>
   <url>
     <loc>https://bonijoao.github.io/cv.html</loc>
-    <lastmod>2026-08-06T23:11:40.471Z</lastmod>
+    <lastmod>2026-08-06T23:58:16.384Z</lastmod>
   </url>
   <url>
     <loc>https://bonijoao.github.io/pacotes/index.html</loc>
-    <lastmod>2026-08-06T17:35:15.418Z</lastmod>
+    <lastmod>2026-08-07T00:23:04.849Z</lastmod>
   </url>
 </urlset>
