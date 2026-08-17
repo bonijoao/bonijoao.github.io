@@ -13,7 +13,7 @@ about:
       href: https://github.com/bonijoao
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com/in/seu-perfil
+      href: https://www.linkedin.com/in/bonifaciojoao
     - text: "<img src='images/orcid.svg' style='width: 16px; height: 16px; margin-right: 6px; vertical-align: -2px;' /> ORCID"
       href: https://orcid.org/0009-0009-2335-8391
     - text: "<img src='images/lattes.png' style='width: 16px; height: 16px; margin-right: 6px; vertical-align: -2px;' /> Lattes"
