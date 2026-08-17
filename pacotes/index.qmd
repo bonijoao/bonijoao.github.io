@@ -68,4 +68,28 @@ remotes::install_github("bonijoao/tidyprf")
 </div>
 :::
 
+::: {.g-col-12 .g-col-md-6}
+<div class="card h-100 p-4">
+
+### `figsr` <span class="badge-tech">GitHub</span> <span class="badge-r">R Package</span>
+
+**Fast Interpretable Greedy-Tree Sums for Tree Ensembles**
+
+Implements FIGS, an additive tree-sum algorithm that greedily reduces residual impurity, deciding at each iteration whether to grow a new tree or deepen an existing one. It reaches accuracy comparable to random forests while keeping the fitted model readable as IF-THEN rules. Supports regression and binary classification, variable importance, bagging, and integrates with `parsnip` and `tidymodels`.
+
+#### Installation
+
+```r
+# Development version from GitHub
+# install.packages("remotes")
+remotes::install_github("bonijoao/figsr")
+```
+
+<div class="mt-4">
+  <a href="https://github.com/bonijoao/figsr" class="btn btn-primary" target="_blank">GitHub Repository →</a>
+</div>
+
+</div>
+:::
+
 :::
