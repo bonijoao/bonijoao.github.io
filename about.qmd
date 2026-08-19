@@ -36,7 +36,7 @@ My research and professional work focus on **Applied Statistics**, **Predictive 
 - **M.Sc. in Statistics and Agricultural Experimentation** (2024 – Present)  
   *Universidade Federal de Lavras (UFLA)*  
   - CNPq Graduate Scholar.  
-  - Advisor: Prof. Dr. Júlio Sílvio de Sousa Bueno Filho.
+  - Advisor: Prof. Dr. Geraldo Magela da Cruz Pereira.
 
 - **B.Sc. in Statistics** (In progress)  
   *Universidade Federal de Lavras (UFLA)*
@@ -131,6 +131,8 @@ My research and professional work focus on **Applied Statistics**, **Predictive 
 - **Portuguese**: Native speaker.
 - **English**: Intermediate (Reading, Writing, Listening, Speaking).
 
+{{< duolingo lang="en" >}}
+
 ---
 
 ### Academic Links
@@ -155,7 +157,7 @@ Minhas pesquisas e atuação profissional concentram-se em **Estatística Aplica
 - **Mestrado em Estatística e Experimentação Agropecuária** (2024 – Presente)  
   *Universidade Federal de Lavras (UFLA)*  
   - Bolsista do Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq).  
-  - Orientador: Prof. Dr. Júlio Sílvio de Sousa Bueno Filho.
+  - Orientador: Prof. Dr. Geraldo Magela da Cruz Pereira.
 
 - **Graduação em Estatística** (Em andamento)  
   *Universidade Federal de Lavras (UFLA)*
@@ -249,6 +251,8 @@ Minhas pesquisas e atuação profissional concentram-se em **Estatística Aplica
 
 - **Português**: Língua materna.
 - **Inglês**: Intermediário (Leitura, Escrita, Compreensão e Conversação).
+
+{{< duolingo lang="pt" >}}
 
 ---
 

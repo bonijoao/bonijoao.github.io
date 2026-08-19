@@ -40,3 +40,8 @@ format:
     page-layout: full
     embed-resources: true
  
+
+duolingo:
+  user: joohbonny
+  courses: 1     # só o inglês (a lista vem ordenada por XP)
+  bars: false    # sem a barra proporcional

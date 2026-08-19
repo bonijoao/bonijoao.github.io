@@ -1,0 +1,61 @@
+# Mantém o card do Duolingo em dia.
+#
+# A extensão quarto-duolingo busca o perfil durante o render, então os números
+# do site são os do último `quarto render`. Este workflow re-renderiza o
+# about.qmd uma vez por semana e commita o docs/ atualizado.
+#
+# Só o about.qmd é renderizado (é a única página com o card): assim o job não
+# precisa de R nem dos pacotes do blog, e o diff fica pequeno.
+name: Atualiza card do Duolingo
+
+on:
+  schedule:
+    # toda segunda, 09:00 UTC ~ 06:00 BRT
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: duolingo
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Fixada na mesma versão usada localmente: com a "latest", uma
+      # atualização do Quarto reescreveria o HTML inteiro e o diff semanal
+      # deixaria de refletir só a mudança de dados.
+      - uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.6.39
+
+      - name: Renderiza o about
+        run: quarto render about.qmd
+
+      # Se a API do Duolingo cair, a extensão avisa e omite o card, e o build
+      # segue normalmente. Sem esta checagem o passo seguinte veria "mudou" e
+      # commitaria justamente a remoção do card.
+      - name: Confere que o card foi gerado
+        run: |
+          if ! grep -q "duolingo-card" docs/about.html; then
+            echo "O card não saiu no HTML — provavelmente a API falhou."
+            echo "Abortando sem commitar para não apagar o card do site."
+            exit 1
+          fi
+
+      - name: Commita se houve mudança
+        run: |
+          if git diff --quiet -- docs; then
+            echo "Nada mudou."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "Atualiza card do Duolingo"
+          git push
