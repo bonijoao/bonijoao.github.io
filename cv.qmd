@@ -87,6 +87,8 @@ My research and professional work focus on **Applied Statistics**, **Predictive 
    Tidy tools and numerical methods in R for monitoring and detecting concept drift in machine learning models.
 2. **[`tidyprf`](https://CRAN.R-project.org/package=tidyprf)**: *Organized Access to Brazilian Federal Highway Police Data* (2026).  
    R package built under the *tidyverse* philosophy for structured extraction of public PRF data.
+3. **[`figsr`](https://CRAN.R-project.org/package=figsr)**: *Fast Interpretable Greedy-Tree Sums for Tree Ensembles* (2026).  
+   Implementation of the FIGS algorithm in R, fitting additive tree sums that stay readable as IF-THEN rules and integrate with *tidymodels*.
 
 #### Development Projects
 - **Animal Nutrition Products Market: Price Modeling, Forecasting, and Interactive Dashboard Implementation** (2024 – 2025)  
@@ -206,6 +208,8 @@ Minhas pesquisas e atuação profissional concentram-se em **Estatística Aplica
    Ferramentas e métodos em R para monitoramento e detecção de concept drift em modelos de machine learning.
 2. **[`tidyprf`](https://CRAN.R-project.org/package=tidyprf)**: *Acesso Organizado aos Dados da Polícia Rodoviária Federal (PRF)* (2026).  
    Pacote desenvolvido sob a filosofia *tidyverse* para extração e estruturação eficiente dos dados públicos da PRF.
+3. **[`figsr`](https://CRAN.R-project.org/package=figsr)**: *Fast Interpretable Greedy-Tree Sums for Tree Ensembles* (2026).  
+   Implementação do algoritmo FIGS em R, ajustando somas aditivas de árvores interpretáveis como regras SE-ENTÃO e integradas ao *tidymodels*.
 
 #### Projetos de Desenvolvimento
 - **O Mercado de Produtos para Nutrição Animal: Modelagem e Predição de Preços, e Implementação de Soluções em Painéis Interativos** (2024 – 2025)  

@@ -71,7 +71,7 @@ remotes::install_github("bonijoao/tidyprf")
 ::: {.g-col-12 .g-col-md-6}
 <div class="card h-100 p-4">
 
-### `figsr` <span class="badge-tech">GitHub</span> <span class="badge-r">R Package</span>
+### `figsr` <span class="badge-cran">CRAN</span> <span class="badge-r">R Package</span>
 
 **Fast Interpretable Greedy-Tree Sums for Tree Ensembles**
 
@@ -80,13 +80,17 @@ Implements FIGS, an additive tree-sum algorithm that greedily reduces residual i
 #### Installation
 
 ```r
+# Official CRAN release
+install.packages("figsr")
+
 # Development version from GitHub
 # install.packages("remotes")
 remotes::install_github("bonijoao/figsr")
 ```
 
 <div class="mt-4">
-  <a href="https://github.com/bonijoao/figsr" class="btn btn-primary" target="_blank">GitHub Repository →</a>
+  <a href="https://CRAN.R-project.org/package=figsr" class="btn btn-primary me-2" target="_blank">CRAN Package Page →</a>
+  <a href="https://github.com/bonijoao/figsr" class="btn btn-outline-primary" target="_blank">GitHub Repository</a>
 </div>
 
 </div>
